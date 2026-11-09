@@ -454,8 +454,10 @@ function drawSearch() {
   const { res, q, fixed, ext, R } = lastSearch;
   // web: by default only what plays in full; previews one tap away
   if (!LOCAL && !res._all) { res._all = res.tracks; }
-  if (!LOCAL) res.tracks = fullOnly ? res._all.filter(isFull) : res._all.slice().sort((a, b) => isFull(b) - isFull(a));
-  const fullBar = LOCAL ? '' : `<div class="full-toggle"><button class="${fullOnly ? 'on' : ''}" data-act="fullonly" data-v="1">Только полные · ${res._all.filter(isFull).length}</button><button class="${fullOnly ? '' : 'on'}" data-act="fullonly" data-v="0">Все, включая фрагменты · ${res._all.length}</button></div>`;
+  const fullN = LOCAL ? 0 : res._all.filter(isFull).length, noFull = !LOCAL && fullN === 0 && res._all.length > 0;
+  // when no full versions could be found (YouTube unreachable / quota / key) show previews instead of an empty list — and say so
+  if (!LOCAL) res.tracks = fullOnly && !noFull ? res._all.filter(isFull) : res._all.slice().sort((a, b) => isFull(b) - isFull(a));
+  const fullBar = LOCAL ? '' : noFull ? `<p class="full-note">Полные версии сейчас не найдены — показаны фрагменты по 30 секунд</p>` : `<div class="full-toggle"><button class="${fullOnly ? 'on' : ''}" data-act="fullonly" data-v="1">Только полные · ${res._all.filter(isFull).length}</button><button class="${fullOnly ? '' : 'on'}" data-act="fullonly" data-v="0">Все, включая фрагменты · ${res._all.length}</button></div>`;
   const counts = Object.fromEntries(Object.keys(SOURCES).map(k => [k, res.tracks.filter(t => t.src[k]).length]));
   if (searchSrc !== 'all' && !counts[searchSrc]) searchSrc = 'all';
   const tabs = `<div class="src-tabs" role="tablist">${[['all', 'Все', res.tracks.length], ...Object.keys(SOURCES).map(k => [k, SOURCES[k].name, counts[k]])].filter(x => x[2] || x[0] === 'all')

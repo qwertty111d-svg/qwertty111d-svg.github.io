@@ -1,5 +1,5 @@
 // Offline shell for the PWA. Bump VERSION on every release so phones pick up new files.
-const VERSION = 'echo-music-web-1794248475';
+const VERSION = 'echo-music-web-1794253966';
 const FILES = ['./', 'index.html', 'style.css', 'i18n.js', 'config.js', 'lib/match.mjs', 'api.js', 'player.js', 'app.js', 'logo.svg', 'manifest.webmanifest',
   'fonts/unbounded.css', 'fonts/mono-cyr.woff2', 'fonts/mono-lat.woff2', 'fonts/onest-cyr-400.woff2', 'fonts/onest-cyr-500.woff2', 'fonts/onest-cyr-600.woff2', 'fonts/onest-cyr-700.woff2',
   'fonts/onest-lat-400.woff2', 'fonts/onest-lat-500.woff2', 'fonts/onest-lat-600.woff2', 'fonts/onest-lat-700.woff2', 'icon-192.png'];

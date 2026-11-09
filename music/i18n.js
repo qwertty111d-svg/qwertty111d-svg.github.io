@@ -76,6 +76,7 @@ const EN = {
   'Волна закончилась — нажми «Слушать» ещё раз': 'The wave ended — press «Play» again', 'Убрали из коллекции': 'Removed from library', 'Исполнитель в коллекции — волна учтёт его': 'Artist added — the wave will use it',
   'Не удалось загрузить': 'Couldn’t load', 'Не удалось загрузить. Проверь интернет': 'Couldn’t load. Check your connection', 'Повторить': 'Retry', 'Исполнитель не найден': 'Artist not found',
   'Не получилось — проверь ссылку': 'Didn’t work — check the link', 'Ничего не нашли ': 'Nothing found', 'Ненормативная лексика': 'Explicit', 'Перенесённый плейлист': 'Imported playlist',
+  'Полные версии сейчас не найдены — показаны фрагменты по 30 секунд': 'Full versions can’t be found right now — showing 30-second previews',
   'Язык интерфейса': 'Interface language', 'Первым будет': 'Up first', 'Сейчас': 'Now', 'Скоро': 'Soon',
 };
 const RULES = [

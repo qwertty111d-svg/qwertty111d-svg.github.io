@@ -953,3 +953,4 @@ body::after{content:"";position:fixed;inset:0;z-index:90;pointer-events:none;opa
 .full-toggle{display:inline-flex;gap:2px;padding:3px;border-radius:99px;border:1px solid var(--line-2);margin:4px 0 10px}
 .full-toggle button{height:30px;padding:0 14px;border-radius:99px;font:400 10.5px Mono,monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);transition:all .25s}
 .full-toggle button.on{background:var(--fg);color:#0c0c0d}
+.full-note{display:inline-block;margin:4px 0 12px;padding:8px 14px;border-radius:10px;border:1px solid var(--line-2);color:var(--soft);font-size:13px}
