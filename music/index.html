@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#09090b">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>Echo Music</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="app-icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="preconnect" href="https://api.deezer.com"><link rel="preconnect" href="https://cdn-images.dzcdn.net"><link rel="preconnect" href="https://itunes.apple.com"><link rel="preconnect" href="https://www.youtube.com">
+<link rel="stylesheet" href="fonts/unbounded.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-home" viewBox="0 0 24 24"><circle cx="8" cy="12" r="2.4" fill="currentColor"/><path d="M12 7.5a6.5 6.5 0 0 1 0 9M15.5 4.5a11 11 0 0 1 0 15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="m16 16 4.5 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-lib" viewBox="0 0 24 24"><path d="M5 4v16M10 4v16M15 4.5l4.5 15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.6-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5Z" fill="currentColor"/></symbol>
+  <symbol id="i-pause" viewBox="0 0 24 24"><rect x="6.5" y="5" width="4" height="14" rx="1.3" fill="currentColor"/><rect x="13.5" y="5" width="4" height="14" rx="1.3" fill="currentColor"/></symbol>
+  <symbol id="i-next" viewBox="0 0 24 24"><path d="M5 6.3v11.4a1 1 0 0 0 1.55.83L15 12.83a1 1 0 0 0 0-1.66L6.55 5.47A1 1 0 0 0 5 6.3Z" fill="currentColor"/><rect x="16.5" y="5.5" width="2.6" height="13" rx="1.2" fill="currentColor"/></symbol>
+  <symbol id="i-prev" viewBox="0 0 24 24"><use href="#i-next" transform="matrix(-1 0 0 1 24 0)"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.3a4.3 4.3 0 0 1 7.5 2.5C19.5 15.4 12 20 12 20Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+  <symbol id="i-heart-f" viewBox="0 0 24 24"><path d="M12 20s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.3a4.3 4.3 0 0 1 7.5 2.5C19.5 15.4 12 20 12 20Z" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+  <symbol id="i-dots" viewBox="0 0 24 24"><circle cx="5.5" cy="12" r="1.8" fill="currentColor"/><circle cx="12" cy="12" r="1.8" fill="currentColor"/><circle cx="18.5" cy="12" r="1.8" fill="currentColor"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="m6 9.5 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-back" viewBox="0 0 24 24"><path d="m14.5 6-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-fwd" viewBox="0 0 24 24"><path d="m9.5 6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-tune" viewBox="0 0 24 24"><path d="M4 7h9M17 7h3M4 17h3M11 17h9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="15" cy="7" r="2.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="9" cy="17" r="2.2" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-shuffle" viewBox="0 0 24 24"><path d="M4 7h3.5c4.5 0 4.5 10 9 10H20M4 17h3.5c1.6 0 2.6-1.3 3.4-3M20 7h-3.5c-1.6 0-2.6 1.3-3.4 3M17.5 4.5 20 7l-2.5 2.5M17.5 14.5 20 17l-2.5 2.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-repeat" viewBox="0 0 24 24"><path d="M5 11V9.5A2.5 2.5 0 0 1 7.5 7H19m-3-3 3 3-3 3M19 13v1.5a2.5 2.5 0 0 1-2.5 2.5H5m3 3-3-3 3-3" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-queue" viewBox="0 0 24 24"><path d="M4 6h12M4 11h12M4 16h7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M15 14v6l4.5-3Z" fill="currentColor"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="m6.5 6.5 11 11m0-11-11 11" stroke="currentColor" stroke-width="2.1" stroke-linecap="round"/></symbol>
+  <symbol id="i-vol" viewBox="0 0 24 24"><path d="M4 9.5v5h3.5L12 18V6L7.5 9.5Z" fill="currentColor"/><path d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></symbol>
+  <symbol id="i-next-up" viewBox="0 0 24 24"><path d="M4 7h10M4 12h10M4 17h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M18 11v8m-4-4h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-edit" viewBox="0 0 24 24"><path d="M5 19h3.5L18.5 9 15 5.5 5 15.5Z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/></symbol>
+  <symbol id="i-trash" viewBox="0 0 24 24"><path d="M5 7h14M10 7V5h4v2M7 7l1 12h8l1-12" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-ext" viewBox="0 0 24 24"><path d="M14 5h5v5M19 5l-8 8M17 14v4a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="3.6" fill="none" stroke="currentColor" stroke-width="1.9"/><path d="M5 19.5c1.2-3.3 3.8-5 7-5s5.8 1.7 7 5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></symbol>
+  <symbol id="i-disc" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.9"/><circle cx="12" cy="12" r="2.2" fill="currentColor"/></symbol>
+  <symbol id="i-dislike" viewBox="0 0 24 24"><path d="M7.5 4.5h8.6a2 2 0 0 1 2 1.6l1.3 6.6a2 2 0 0 1-2 2.3H13l.8 3.4a1.6 1.6 0 0 1-2.9 1.2L7.5 13.5M7.5 4.5v9M7.5 4.5H4.8a.8.8 0 0 0-.8.8v7.4a.8.8 0 0 0 .8.8h2.7" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round" stroke-linecap="round"/></symbol>
+  <symbol id="i-undo" viewBox="0 0 24 24"><path d="M9 7 5 11l4 4M5 11h9a5 5 0 0 1 0 10h-2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-lyrics" viewBox="0 0 24 24"><path d="M4 6h11M4 10.5h9M4 15h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="16.5" cy="16.5" r="2.6" fill="none" stroke="currentColor" stroke-width="2"/><path d="M19.1 16.5V7.5l2 1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-mute" viewBox="0 0 24 24"><path d="M4 9.5v5h3.5L12 18V6L7.5 9.5Z" fill="currentColor"/><path d="m16 9.5 5 5m0-5-5 5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></symbol>
+  <symbol id="i-eq" viewBox="0 0 24 24"><path d="M5 20V13M5 9V4M12 20v-4M12 12V4M19 20v-9M19 7V4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M3 11h4M10 14h4M17 9h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></symbol>
+</svg>
+
+
+<div class="route-bar" id="routeBar"></div>
+<div class="app">
+  <nav class="rail" aria-label="Разделы">
+    <a class="brand" href="#home" aria-label="Echo Music"><svg class="mark" viewBox="0 0 64 64" aria-hidden="true"><path class="ghost" d="M14.04 23.64 A13 13 0 0 0 14.04 40.36"/><circle cx="24" cy="32" r="6.5"/><path d="M32.36 22.04 A13 13 0 0 1 32.36 41.96"/><path class="far" d="M40.55 16.02 A23 23 0 0 1 40.55 47.98"/></svg><span>Echo <b>Music</b></span></a>
+    <button class="nav-item" data-view="home"><svg><use href="#i-home"/></svg><span>Главная</span></button>
+    <button class="nav-item" data-view="search"><svg><use href="#i-search"/></svg><span>Поиск</span></button>
+    <button class="nav-item" data-view="library"><svg><use href="#i-lib"/></svg><span>Коллекция</span></button>
+    <div class="rail-lists" id="railLists"></div>
+  </nav>
+
+  <div class="center">
+    <header class="topbar" id="topbar">
+      <div class="tb-nav desk"><button class="ib sm" onclick="history.back()" aria-label="Назад"><svg><use href="#i-back"/></svg></button><button class="ib sm" onclick="history.forward()" aria-label="Вперёд"><svg><use href="#i-fwd"/></svg></button></div>
+      <a class="tb-brand mob" href="#home"><svg class="mark" viewBox="0 0 64 64" aria-hidden="true"><path class="ghost" d="M14.04 23.64 A13 13 0 0 0 14.04 40.36"/><circle cx="24" cy="32" r="6.5"/><path d="M32.36 22.04 A13 13 0 0 1 32.36 41.96"/><path class="far" d="M40.55 16.02 A23 23 0 0 1 40.55 47.98"/></svg><span>Echo <b>Music</b></span></a>
+      <label class="tb-search desk"><svg><use href="#i-search"/></svg><input id="topSearch" type="search" placeholder="Трек, исполнитель, альбом или ссылка SoundCloud" autocomplete="off"><kbd>/</kbd></label>
+      <button class="lang-btn" id="langBtn" aria-label="Язык интерфейса" title="Язык интерфейса"></button>
+      <button class="ib mob" data-view="search" aria-label="Поиск"><svg><use href="#i-search"/></svg></button>
+    </header>
+    <main class="main" id="main" tabindex="-1"></main>
+  </div>
+
+  <div class="bar" id="bar" hidden>
+    <button class="bar-track" id="barOpen" aria-label="Открыть плеер">
+      <img class="bar-cover" id="barCover" alt="">
+      <span class="bar-text"><b id="barTitle"></b><small id="barArtist"></small><span class="pv" id="barPv" hidden>фрагмент</span></span>
+    </button>
+    <div class="bar-mid">
+      <div class="bar-ctrl">
+        <button class="ib sm desk" id="barShuffle" aria-label="Перемешать"><svg><use href="#i-shuffle"/></svg></button>
+        <button class="ib desk" id="barPrev" aria-label="Предыдущий"><svg><use href="#i-prev"/></svg></button>
+        <button class="ib play" id="barPlay" aria-label="Пауза"><svg><use href="#i-pause"/></svg></button>
+        <button class="ib" id="barNext" aria-label="Следующий"><svg><use href="#i-next"/></svg></button>
+        <button class="ib sm desk" id="barRepeat" aria-label="Повтор"><svg><use href="#i-repeat"/></svg></button>
+      </div>
+      <div class="bar-prog desk"><span class="time" id="barTime">0:00</span><input type="range" class="seek" id="barSeek" min="0" max="1000" value="0" aria-label="Перемотка"><span class="time" id="barDur">0:00</span></div>
+    </div>
+    <div class="bar-side desk">
+      <button class="ib sm" id="barDis" aria-label="Не нравится" title="Не нравится — волна учтёт"><svg><use href="#i-dislike"/></svg></button>
+      <button class="ib sm" id="barLike" aria-label="Нравится"><svg><use href="#i-heart"/></svg></button>
+      <span class="bar-sep"></span>
+      <button class="ib sm" id="barLyrics" aria-label="Текст песни" title="Текст песни"><svg><use href="#i-lyrics"/></svg></button>
+      <button class="ib sm" id="barEq" aria-label="Эквалайзер и Echo Space" title="Эквалайзер · Echo Space"><svg><use href="#i-eq"/></svg></button>
+      <button class="ib sm" id="barQueue" aria-label="Очередь"><svg><use href="#i-queue"/></svg></button>
+      <div class="volume"><button class="ib sm" id="volBtn" aria-label="Выключить звук" title="Звук (M)"><svg><use href="#i-vol"/></svg></button><input type="range" class="seek vol" id="vol" min="0" max="100" value="80" aria-label="Громкость" title="Громкость — колесо мыши тоже работает"></div>
+    </div>
+    <i class="bar-line" id="barLine"></i>
+  </div>
+
+  <nav class="tabs" aria-label="Разделы">
+    <button class="nav-item" data-view="home"><svg><use href="#i-home"/></svg><span>Главная</span></button>
+    <button class="nav-item" data-view="search"><svg><use href="#i-search"/></svg><span>Поиск</span></button>
+    <button class="nav-item" data-view="library"><svg><use href="#i-lib"/></svg><span>Коллекция</span></button>
+  </nav>
+</div>
+
+<section class="player" id="player" aria-label="Сейчас играет" hidden>
+  <div class="player-bg"><img id="pBg" alt=""><div class="p-clip" id="pClip"></div></div>
+  <div class="p-brand" aria-hidden="true">
+    <svg class="pb-mark" viewBox="0 0 64 64"><path class="ghost" d="M14.04 23.64 A13 13 0 0 0 14.04 40.36"/><circle cx="24" cy="32" r="6.5"/><path class="near" d="M32.36 22.04 A13 13 0 0 1 32.36 41.96"/><path class="far" d="M40.55 16.02 A23 23 0 0 1 40.55 47.98"/></svg>
+    <span class="pb-word" data-t="ECHO">ECHO</span>
+  </div>
+  <header class="player-top">
+    <button class="ib" id="pClose" aria-label="Свернуть"><svg><use href="#i-down"/></svg></button>
+    <div class="player-ctx"><small>Играет из</small><b id="pCtx">Моя волна</b></div>
+    <button class="ib" id="pMenu" aria-label="Ещё"><svg><use href="#i-dots"/></svg></button>
+  </header>
+  <div class="player-body">
+    <div class="player-art"><div class="p-echo" aria-hidden="true"><img id="pGhost1" alt=""><img id="pGhost2" alt=""></div><img class="p-cover" id="pCover" alt=""><div class="p-video" id="pVideo" aria-hidden="true"></div><div class="lyrics" id="lyrics" aria-live="off"></div></div>
+    <div class="player-info">
+      <div class="player-meta">
+        <img class="pm-cover" id="pmCover" alt=""><div class="pm-text"><h2 id="pTitle"></h2><a id="pArtist" href="#"></a></div>
+        <button class="ib" id="pDis" aria-label="Не нравится" title="Не нравится — волна учтёт"><svg><use href="#i-dislike"/></svg></button><button class="ib like" id="pLike" aria-label="Нравится"><svg><use href="#i-heart"/></svg></button>
+      </div>
+      <input type="range" class="seek big" id="pSeek" min="0" max="1000" value="0" aria-label="Перемотка">
+      <div class="times"><span id="pTime">0:00</span><span id="pPv" class="pv" hidden>фрагмент 30 сек</span><span id="pDur">0:00</span></div>
+      <div class="pctrl">
+        <button class="ib" id="pShuffle" aria-label="Перемешать"><svg><use href="#i-shuffle"/></svg></button>
+        <button class="ib lg" id="pPrev" aria-label="Предыдущий"><svg><use href="#i-prev"/></svg></button>
+        <button class="ib xl play" id="pPlay" aria-label="Пауза"><svg><use href="#i-pause"/></svg></button>
+        <button class="ib lg" id="pNext" aria-label="Следующий"><svg><use href="#i-next"/></svg></button>
+        <button class="ib" id="pRepeat" aria-label="Повтор"><svg><use href="#i-repeat"/></svg></button>
+      </div>
+      <div class="full-in" id="pFull"></div>
+      <div class="p-tools"><button class="queue-handle" id="lyricsToggle"><svg><use href="#i-lyrics"/></svg>Текст</button><button class="queue-handle" id="pTrackWave"><svg><use href="#i-home"/></svg>Волна по треку</button><button class="queue-handle" id="pEq"><svg><use href="#i-eq"/></svg>Звук</button><button class="queue-handle" id="queueToggle"><svg><use href="#i-queue"/></svg>Дальше в очереди</button></div>
+    </div>
+  </div>
+  <div class="queue" id="queue" aria-label="Очередь">
+    <div class="queue-head"><b>Дальше</b><button class="ib" id="queueClose" aria-label="Закрыть очередь"><svg><use href="#i-close"/></svg></button></div>
+    <div class="queue-list" id="queueList"></div>
+  </div>
+</section>
+
+<div class="sheet-wrap" id="sheetWrap" hidden>
+  <div class="sheet-dim" id="sheetDim"></div>
+  <div class="sheet" id="sheet" role="dialog" aria-modal="true"></div>
+</div>
+<div class="yt-box off" id="ytBox"><div id="ytFrame"></div><button class="yt-close" id="ytClose" aria-label="Пауза и скрыть видео"><svg><use href="#i-close"/></svg></button></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="i18n.js"></script>
+<script src="config.js"></script>
+<script type="module">import * as M from './lib/match.mjs'; window.EchoMatch = M;</script>
+<script src="api.js"></script>
+<script src="player.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title data-i="title">Echo — студия игр и программ</title>
+<meta name="description" data-ia="content=desc" content="Echo — маленькая студия. Делаем игры и программы с одной ясной идеей. Наша игра «Следом!» — аркада, где главный враг — ты сам.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Echo — студия игр и программ">
+<meta property="og:description" content="Делаем игры, которые отзываются. Играй в «Следом!» бесплатно в браузере.">
+<meta property="og:image" content="https://qwertty111d-svg.github.io/media/og.jpg">
+<meta property="og:url" content="https://qwertty111d-svg.github.io/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://qwertty111d-svg.github.io/">
+<meta name="theme-color" content="#0c0c0d">
+<link rel="icon" href="media/echo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="fonts/unbounded.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="progress" aria-hidden="true"></div>
+
+<header class="nav">
+  <a class="brand" href="#top" aria-label="Echo — наверх" data-ia="aria-label=top">
+    <svg class="mark" viewBox="0 0 64 64" aria-hidden="true"><path d="M14.04 23.64A13 13 0 0 0 14.04 40.36" class="ghost"/><circle cx="24" cy="32" r="6.5"/><path d="M32.36 22.04A13 13 0 0 1 32.36 41.96"/><path d="M40.55 16.02A23 23 0 0 1 40.55 47.98" class="far"/></svg>
+    <span>Echo</span>
+  </a>
+  <nav class="links" id="menu">
+    <a href="#game" data-i="n_game">Игра</a><a href="#soon" data-i="n_soon">Скоро</a><a href="#media" data-i="n_media">Медиа</a><a href="#music" data-i="n_music">Музыка</a><a href="#idea" data-i="n_idea">Идеи</a><a href="#app" data-i="n_app">Программа</a><a href="#follow" data-i="n_follow">Мы в сети</a>
+  </nav>
+  <div class="nav-r">
+    <button class="lang" type="button" data-i="lang" data-ia="aria-label=lang_a" aria-label="Switch to English" lang="en">EN</button>
+    <a class="nav-cta" data-link="play" href="#game" data-i="play">Играть</a>
+    <button class="burger" aria-label="Меню" data-ia="aria-label=menu" aria-controls="menu" aria-expanded="false"><i></i><i></i></button>
+  </div>
+</header>
+
+<main id="top">
+  <!-- hero: the wordmark and its echoes; behind them, your path replayed by your echoes -->
+  <section class="hero">
+    <canvas id="field" aria-hidden="true"></canvas>
+    <div class="spot" aria-hidden="true"></div>
+    <div class="hero-in">
+      <p class="eyebrow up" data-i="eyebrow"><span class="dot"></span>студия игр и программ</p>
+      <h1 class="word" aria-label="Echo">
+        <span class="layer" aria-hidden="true">ECHO</span><span class="layer" aria-hidden="true">ECHO</span><span class="layer" aria-hidden="true">ECHO</span><span class="solid">ECHO</span>
+      </h1>
+      <p class="lead up" data-i="lead">Делаем игры, которые <em>отзываются</em>.</p>
+      <div class="cta up">
+        <a class="btn" data-link="play" href="#game"><span data-i="cta_play">Играть в «Следом!»</span></a>
+        <a class="btn ghost" data-link="youtube" href="#follow"><span data-i="cta_yt">Смотреть на YouTube</span></a>
+      </div>
+    </div>
+    <p class="hint up" data-i="hint"><span class="hint-d">проведи курсором</span><span class="hint-t">коснись экрана</span> — за тобой пойдёт эхо</p>
+    <a class="scroll" href="#about" aria-label="Листать вниз" data-ia="aria-label=scroll"><i></i></a>
+  </section>
+
+  <!-- what we are: the words light up as you read -->
+  <section id="about" class="about">
+    <p class="num" data-i="about_n">о студии</p>
+    <p class="manifest" data-words data-i="manifest">Echo — маленькая студия. Мы делаем игры и программы с одной ясной идеей и без лишнего. Всё, что ты делаешь, возвращается. Иногда — эхом.</p>
+  </section>
+
+  <!-- the game: the phone stays, the story scrolls beside it -->
+  <section id="game" class="game">
+    <div class="game-head">
+      <p class="num reveal" data-i="game_n">наша игра</p>
+      <h2 class="reveal" data-i="game_h">Следом!</h2>
+      <p class="sub reveal" data-i="game_sub">Аркада, где главный враг&nbsp;— ты сам.</p>
+    </div>
+    <div class="story">
+      <div class="stage">
+        <div class="phone">
+          <video src="media/sledom.mp4" poster="media/sledom.jpg" autoplay muted loop playsinline preload="metadata" disablepictureinpicture></video>
+          <div class="glare"></div>
+        </div>
+      </div>
+      <ol class="chapters">
+        <li class="chapter" data-step="0"><b>01</b><h3 data-i="c1h">Ты бежишь</h3><p data-i="c1p">Собираешь звёзды, пока идёт время. Каждый твой шаг запоминается.</p></li>
+        <li class="chapter" data-step="1"><b>02</b><h3 data-i="c2h">Прошлое выходит следом</h3><p data-i="c2p">Через пару секунд по твоему пути бежит эхо. Потом ещё одно. И ещё.</p></li>
+        <li class="chapter" data-step="2"><b>03</b><h3 data-i="c3h">Не попадись самому себе</h3><p data-i="c3p">Остановился&nbsp;— а эхо всё равно идёт по твоему следу. Чем дольше играешь, тем теснее.</p></li>
+      </ol>
+    </div>
+    <div class="facts reveal">
+      <div><b data-i="f1b">0&nbsp;₽</b><span data-i="f1">бесплатно, прямо в&nbsp;браузере</span></div>
+      <div><b>8</b><span data-i="f2">языков</span></div>
+      <div><b>1</b><span data-i="f3">секретный уровень. Его придумал зритель в&nbsp;комментариях</span></div>
+    </div>
+    <div class="row reveal">
+      <a class="btn" data-link="play" href="#"><span data-i="play_free">Играть бесплатно</span></a>
+      <a class="btn ghost tg" data-link="telegram" href="#"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 4 3.6 10.9c-.8.3-.8 1.4 0 1.7l4.3 1.5 1.6 5c.2.7 1.1.9 1.6.3l2.4-2.6 4.3 3.2c.6.4 1.4.1 1.6-.6L22.3 5.2c.2-.8-.6-1.5-1.3-1.2zM9.4 13.6l8.2-6.1-6.4 7.4-.4 3.1z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><span data-i="tg_play">Играть в Telegram</span></a>
+      <a class="btn ghost" data-link="yandex" href="#"><span data-i="yandex">Яндекс Игры</span></a>
+    </div>
+  </section>
+
+  <!-- coming to phones -->
+  <section id="soon" class="soon">
+    <p class="num reveal" data-i="soon_n">скоро</p>
+    <h2 class="reveal" data-i="soon_h">В кармане</h2>
+    <p class="sub reveal" data-i="soon_sub">Уже сейчас «Следом!» работает в браузере и в Telegram — и на телефоне тоже. Версии для магазинов приложений мы готовим.</p>
+    <ul class="stores">
+      <li class="store store--live reveal"><a class="st-link" data-link="telegram" data-keep href="#" aria-label="Telegram"></a><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21 4 3.6 10.9c-.8.3-.8 1.4 0 1.7l4.3 1.5 1.6 5c.2.7 1.1.9 1.6.3l2.4-2.6 4.3 3.2c.6.4 1.4.1 1.6-.6L22.3 5.2c.2-.8-.6-1.5-1.3-1.2zM9.4 13.6l8.2-6.1-6.4 7.4-.4 3.1z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></span><span class="st-n">Telegram</span><span class="st-s"><i class="live" aria-hidden="true"></i><span data-i="available">доступно</span></span></li>
+      <li class="store reveal"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="6" y="2.5" width="12" height="19" rx="3.2" fill="none" stroke="currentColor" stroke-width="1.8"/><rect x="10" y="4.6" width="4" height="1.4" rx=".7"/><circle cx="12" cy="18.4" r="1"/></svg></span><span class="st-n">App Store</span><span class="st-s" data-i="planned">в планах</span></li>
+      <li class="store reveal"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 3.2v17.6c0 .5.5.8.9.6l15.3-8.8c.4-.3.4-.9 0-1.2L4.9 2.6c-.4-.2-.9.1-.9.6z"/></svg></span><span class="st-n">Google Play</span><span class="st-s" data-i="planned">в планах</span></li>
+      <li class="store reveal"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="6"/><path d="M9 7.5h4.2a3 3 0 0 1 0 6H9zM9 13.5V17M12.6 13.5 15.5 17" fill="none" stroke="var(--bg)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="st-n">RuStore</span><span class="st-s" data-i="planned">в планах</span></li>
+      <li class="store reveal"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="6"/><path d="M14.5 17V7h-2.3a3 3 0 0 0 0 6h2.3M12.2 13 9.5 17" fill="none" stroke="var(--bg)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="st-n" data-i="yandex">Яндекс Игры</span><span class="st-s" data-i="soon">скоро</span></li>
+    </ul>
+    <p class="soon-note reveal"><span data-i="soon_note">Первыми о выходе узнают подписчики.</span> <a data-link="youtube" href="#follow" data-i="soon_yt">Подписаться на YouTube&nbsp;→</a></p>
+  </section>
+
+  <!-- media: screenshots, art and a gameplay clip for press and video makers, in one ZIP -->
+  <section id="media" class="media">
+    <p class="num reveal" data-i="media_n">медиа</p>
+    <h2 class="reveal" data-i="media_h">Для прессы и&nbsp;блогеров</h2>
+    <p class="sub reveal" data-i="media_sub">Скриншоты, обложки и видео геймплея. Можно свободно использовать в&nbsp;обзорах, роликах и&nbsp;стримах об&nbsp;игре.</p>
+    <div class="shots" role="list">
+      <figure class="shot reveal" role="listitem"><img src="media/press/play.jpg" data-ia="alt=s1a,src=s1i" alt="Геймплей: герой собирает звёзды, рядом бегут эхо" loading="lazy" width="540" height="960"><figcaption data-i="s1">Бесконечный забег</figcaption></figure>
+      <figure class="shot reveal" role="listitem"><img src="media/press/blades.jpg" data-ia="alt=s2a,src=s2i" alt="Уровень-испытание с вращающимися лезвиями" loading="lazy" width="540" height="960"><figcaption data-i="s2">Испытания</figcaption></figure>
+      <figure class="shot reveal" role="listitem"><img src="media/press/night.jpg" data-ia="alt=s3a,src=s3i" alt="Ночная тема оформления" loading="lazy" width="540" height="960"><figcaption data-i="s3">Темы оформления</figcaption></figure>
+      <figure class="shot reveal" role="listitem"><img src="media/press/streak.jpg" data-ia="alt=s4a,src=s4i" alt="Забег дня и награды за серию" loading="lazy" width="540" height="960"><figcaption data-i="s4">Забег дня и серия</figcaption></figure>
+    </div>
+    <div class="kit reveal">
+      <div class="kit-info"><b data-i="kit_b">Пресс-кит «Следом!»</b><span data-i="kit">29 скриншотов (телефон и компьютер, RU и EN) · иконка, обложки, баннеры · 32 с геймплея · факты об игре</span></div>
+      <a class="btn" href="press/sledom-presskit.zip" download><span data-i="kit_btn">Скачать ZIP · 15 МБ</span></a>
+    </div>
+  </section>
+
+  <!-- ideas: they go to Netlify Forms; the owner reads them in the Netlify dashboard and by e-mail -->
+  <section id="idea" class="idea">
+    <p class="num reveal" data-i="idea_n">идеи</p>
+    <h2 class="reveal" data-i="idea_h">Придумай обновление</h2>
+    <p class="sub reveal" data-i="idea_sub">Мы читаем каждую идею. Лучшие попадают в игру.</p>
+    <p class="reveal" data-i="idea_p">Так появился секретный уровень. Где вход&nbsp;— не скажем.</p>
+    <form class="ideaform reveal" name="idea" method="POST" action="#">
+      <input type="hidden" name="form-name" value="idea">
+      <input type="hidden" name="lang" value="ru">
+      <p class="hp" aria-hidden="true"><label>Не заполняй: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+      <fieldset class="kinds"><legend data-i="kinds">Про что идея</legend>
+        <label><input type="radio" name="kind" value="уровень" checked><span data-i="k1">Уровень</span></label>
+        <label><input type="radio" name="kind" value="механика"><span data-i="k2">Механика</span></label>
+        <label><input type="radio" name="kind" value="герой и скины"><span data-i="k3">Герой и скины</span></label>
+        <label><input type="radio" name="kind" value="другое"><span data-i="k4">Другое</span></label>
+      </fieldset>
+      <label class="field"><span data-i="f_idea">Идея</span><textarea data-ia="placeholder=ph_idea" name="idea" rows="4" maxlength="1500" required placeholder="Например: уровень, где эхо бежит задом наперёд"></textarea><em class="count">0 / 1500</em></label>
+      <label class="field"><span data-i="f_nick">Ник (если хочешь, чтобы мы тебя упомянули)</span><input name="name" maxlength="60" autocomplete="nickname" data-ia="placeholder=ph_nick" placeholder="@ник на YouTube"></label>
+      <button class="btn send" type="submit"><span data-i="send">Отправить идею</span></button>
+      <div class="sent" role="status" hidden><i class="sent-ring" aria-hidden="true"></i><b data-i="sent_b">Идея у нас.</b><span data-i="sent">Спасибо! Следи за обновлениями на YouTube.</span><button type="button" class="again" data-i="again">Предложить ещё</button></div>
+    </form>
+  </section>
+
+  <!-- the app -->
+  <section id="app" class="app">
+    <div class="app-text">
+      <p class="num reveal" data-i="app_n">наша программа</p>
+      <h2 class="reveal">Echo AI</h2>
+      <p class="sub reveal" data-i="app_sub">Помощник для работы и идей.</p>
+      <p class="reveal" data-i="app_p">Чат и рабочее место в одном окне: можно поговорить, а можно сразу сесть за дело&nbsp;— файлы, редактор, терминал. Разговор не теряется, когда переключаешься.</p>
+      <p class="status reveal" data-i="app_st"><span class="dot"></span>в разработке</p>
+    </div>
+    <div class="window reveal" aria-label="Пример окна Echo AI" data-ia="aria-label=win">
+      <div class="bar"><i></i><i></i><i></i><span>Echo AI</span></div>
+      <div class="chat"></div>
+    </div>
+  </section>
+
+  <section id="music" class="music">
+    <div class="music-head">
+      <p class="num reveal" data-i="mu_n">наш плеер</p>
+      <h2 class="reveal music-word" data-t="Echo Music">Echo Music</h2>
+      <p class="sub reveal" data-i="mu_sub">Вся музыка — в одном месте.</p>
+    </div>
+    <div class="music-grid">
+      <a class="music-shot reveal" href="music/" aria-label="Открыть Echo Music" data-ia="aria-label=mu_open_a">
+        <span class="bar"><i></i><i></i><i></i><span>Echo Music</span></span>
+        <img src="media/echo-music.jpg" alt="Главный экран Echo Music" data-ia="alt=mu_alt,src=mu_img" loading="lazy">
+        <span class="music-pulse" aria-hidden="true"><i></i><i></i><i></i></span>
+      </a>
+      <div class="music-text">
+        <p class="reveal" data-i="mu_p">Один поиск по каталогам сразу нескольких сервисов, коллекция без границ между ними и «Моя волна», которая учится на твоих лайках, пропусках и «не нравится».</p>
+        <ul class="music-feats">
+          <li class="reveal"><b data-i="mu_f1">Тексты в такт</b><span data-i="mu_f1s">строка подсвечивается вместе с голосом</span></li>
+          <li class="reveal"><b data-i="mu_f2">Echo Space</b><span data-i="mu_f2s">эквалайзер и фирменное пространство звука</span></li>
+          <li class="reveal"><b data-i="mu_f3">Клипы и волна по треку</b><span data-i="mu_f3s">видео, если оно есть, и бесконечный поток похожего</span></li>
+        </ul>
+        <div class="cta reveal"><a class="btn" href="music/"><span data-i="mu_open" data-t="Открыть Echo Music">Открыть Echo Music</span></a></div>
+        <p class="status reveal" data-i="mu_st"><span class="dot"></span>веб-версия · бета</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- where to find us -->
+  <section id="follow" class="follow">
+    <p class="num reveal" data-i="fol_n">мы в сети</p>
+    <h2 class="reveal" data-i="fol_h">Будь рядом</h2>
+    <div class="links-big">
+      <a class="go reveal" data-link="youtube" data-keep href="#">
+        <span class="go-k">YouTube</span><span class="go-t" data-i="yt_t">Короткие ролики: новые уровни, секреты и то, как мы делаем игру.</span><span class="go-a" aria-hidden="true">→</span><i class="go-ring" aria-hidden="true"></i>
+      </a>
+      <a class="go reveal" data-link="boosty" data-keep href="#">
+        <span class="go-k">Boosty</span><span class="go-t" data-i="bo_t">Поддержать студию. Каждый рубль идёт в новые обновления.</span><span class="go-a" aria-hidden="true">→</span><i class="go-ring" aria-hidden="true"></i>
+      </a>
+      <a class="go go--wide reveal" data-link="tgbot" data-keep href="#">
+        <span class="go-k">Telegram</span><span class="go-t" data-i="tg_t">Бот игры: событие Забега дня, советы и утреннее напоминание. Играть можно прямо в чате.</span><span class="go-a" aria-hidden="true">→</span><i class="go-ring" aria-hidden="true"></i>
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="foot-word" aria-hidden="true">ECHO</div>
+  <div class="foot-row">
+    <span>© <span id="year">2026</span> Echo</span>
+    <nav><a data-link="youtube" href="#">YouTube</a><a data-link="tgbot" href="#">Telegram</a><a data-link="boosty" href="#">Boosty</a><a href="#idea" data-i="n_idea">Идеи</a><a href="#media" data-i="n_media">Медиа</a><a href="privacy.html" data-i="privacy" data-ia="href=privacy_u">Конфиденциальность</a><a data-link="play" href="#" data-i="play">Играть</a></nav>
+  </div>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>

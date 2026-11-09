@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Echo mark: a signal (dot), its outgoing wave (two arcs) and a faint reflected echo on the left -->
+  <defs>
+    <linearGradient id="echoG" x1="8" y1="10" x2="56" y2="54" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#b3bdff"/>
+      <stop offset="0.55" stop-color="#8f7cf3"/>
+      <stop offset="1" stop-color="#4cc9b8"/>
+    </linearGradient>
+  </defs>
+  <path d="M14.04 23.64 A13 13 0 0 0 14.04 40.36" stroke="url(#echoG)" stroke-width="4" stroke-linecap="round" opacity="0.38"/>
+  <circle cx="24" cy="32" r="6.5" fill="url(#echoG)"/>
+  <path d="M32.36 22.04 A13 13 0 0 1 32.36 41.96" stroke="url(#echoG)" stroke-width="5.2" stroke-linecap="round"/>
+  <path d="M40.55 16.02 A23 23 0 0 1 40.55 47.98" stroke="url(#echoG)" stroke-width="5.2" stroke-linecap="round" opacity="0.72"/>
+</svg>

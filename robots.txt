@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://qwertty111d-svg.github.io/sitemap.xml
