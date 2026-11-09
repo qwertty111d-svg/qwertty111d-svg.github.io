@@ -1,0 +1,12 @@
+Copyright (c) 2026 Echo. All rights reserved.
+
+The Echo website, its original interface, artwork, and application code are
+published for users to access through the website. Public access to the
+repository or website does not grant permission to reproduce, redistribute,
+modify, sell, or publish substantial portions of those original works.
+
+This notice does not supersede the licenses or rights of third-party
+libraries, APIs, media, or other third-party materials used in the project.
+Any third-party material remains subject to its respective terms.
+
+For permissions, contact the Echo project owner through its official website.
