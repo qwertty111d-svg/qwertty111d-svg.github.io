@@ -1,5 +1,5 @@
 // Formspree form id (formspree.io → your form → «f/xxxxxxx» → paste the xxxxxxx part)
-const FORMSPREE_ID = '';
+const FORMSPREE_ID = 'xaeeryng';
 // Echo studio site: links, the hero (the wordmark's echoes and the echo field — your path replayed by your echoes, the
 // mechanic of «Следом!»), the manifesto lighting up as you read, the game's story beside a sticky phone, the app's chat
 // playing itself, the cards that fill from where you point, the reading progress line.
